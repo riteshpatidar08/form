@@ -54,7 +54,11 @@ if(!MatchPassword){
 
  res.status(200).json({
     message : "User Login Successfull",
-    token
+    token,
+    userData : {
+        name : user.name,
+        email : user.email
+    }
  })
 }catch(error){
 next(error)
